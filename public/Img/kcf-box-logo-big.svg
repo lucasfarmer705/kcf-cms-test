@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="shield-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" rx="20" fill="url(#shield-grad)"/>
+  <!-- Outline design of the cross emblem -->
+  <rect x="40" y="40" width="120" height="120" rx="12" fill="none" stroke="#2563eb" stroke-width="6" opacity="0.6"/>
+  <rect x="45" y="45" width="110" height="110" rx="8" fill="none" stroke="#e2e8f0" stroke-width="4"/>
+  <!-- Cross Symbol -->
+  <path d="M100 65 L100 135 M75 88 L125 88" stroke="#ffffff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
