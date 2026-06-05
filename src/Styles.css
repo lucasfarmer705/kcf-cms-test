@@ -1,0 +1,2754 @@
+@font-face {
+    font-family: 'Benedict';
+    src: url('subset-Benedict.woff') format('woff2'),
+        url('subset-Benedict.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+#app-root-container {
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+}
+
+p {
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    font-style: normal;
+    line-height: 25px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    font-size: 1.1rem;
+}
+
+/* ========== h tags ========== */
+
+h1 {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 700; 
+    font-style: normal;
+    font-size: 70px;
+    color: rgb(255, 255, 255); 
+    text-align: center;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+h2 {
+    color: #454545;
+    font-family: "Oxygen", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    text-align: center;
+    font-size: 50px;
+    letter-spacing: 1px;
+}
+
+h3 {
+    color: #ffffff;
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    position: relative;
+    left: 0px;
+    padding: 10px;
+    font-size: 40px;
+    top: -40px;
+    text-align: center;
+}
+
+h4 {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+    text-align: center;
+}
+
+h5 {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffffff;
+    font-size: 70px;
+    text-align: center;
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+}
+
+h6 {
+    font-family: sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #000000;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* ========== responsive navigation ========== */
+
+.sidebar {
+    margin: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 300px;
+    z-index: 999;
+    background-color: #252628;
+    display: none; /* Controlled dynamically in component */
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.497);
+}
+
+.sidebar ul {
+    background-color: #000;
+}
+
+.sidebar li {
+    padding: 10px;
+    width: 100%;
+    margin-left: 70px;
+    background-color: rgba(165, 42, 42, 0);
+}
+
+.sidebar a {
+    letter-spacing: 2px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(127, 255, 212, 0);
+    color: white;
+}
+
+.BlueLogo {
+    height: 100px;
+    width: 100px;
+}
+
+.icon {
+    border-radius: 50%;
+}
+
+.logo {
+    height: 30px; 
+    width: 30px; 
+    flex-shrink: 0;
+    object-fit: contain;
+}
+
+.word-logo {
+    position: relative;
+    font-weight: 300;
+}
+
+.brand-li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-left: 20px;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+}
+
+strong {
+    font-weight: 600;
+}
+
+.logobottom {
+    height: 60px;
+    width: 60px;
+    position: relative;
+    margin: 0;
+    bottom: 10px;
+}
+
+header {
+   position: absolute;
+   padding: 30px 0px 30px 0px;
+   width: 100%;
+   background-color: #ffffff;
+   box-shadow: 0 4px 25px rgba(255, 255, 255, 0.35), 0 1px 10px rgba(255, 255, 255, 0.2) !important;
+   color: #a3a3a3;
+   z-index: 1000;
+}
+
+.spacer {
+    height: 90px;
+    background-color: #ffffff;
+}
+
+.Live_div {
+    width: 100% !important;
+    max-width: 600px !important;
+    height: auto !important;
+    display: block !important;
+    box-sizing: border-box !important;
+}
+
+.sap-embed-player {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 0 !important;
+    padding-top: 56.25% !important; /* 16:9 aspect ratio */
+    display: block !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+}
+
+.sap-embed-player iframe {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    border: 0 !important;
+}
+
+footer {
+    padding: 20px; 
+    background-color: #000000; 
+    color: #919191; 
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+nav {
+    background-color: rgba(137, 43, 226, 0);
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    display: none;
+    color: #2b9cbb;
+    cursor: pointer;
+}
+
+.top-ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    background-color: #bb812b00;
+    position: absolute;
+    right: 30px;
+}
+
+li {
+    display: flex;
+    align-self: center;
+    list-style: none;
+    background-color: #34815700;
+    padding-left: 30px;
+}
+
+a {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: #5b5b5b;
+    text-decoration: none; 
+    font-size: 23px;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown li {
+    display: block;
+    margin: 0;
+    padding: 0px;
+    background-color: #252628;
+}
+
+.dropdown a {
+    letter-spacing: 2px;
+    color: white;
+    font-weight: 300;
+    margin: 0;
+    padding: 10px;
+}
+
+.dropdown li:hover {
+    text-decoration: underline;
+}
+
+ul li .dropdown {
+    width: 250px;
+    background-color: #252628;
+    position: absolute;
+    z-index: 999;
+    display: none;
+    padding: 10px;
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.317);
+    border-radius: 10px;
+    top: 100%;
+    left: 0;
+}   
+
+ul li:hover ul {
+    display: block;
+}
+
+.info_li {
+    position: relative;
+    top: 80px;
+    background-color: rgba(0, 255, 255, 0);
+}
+
+.info_div {
+    display: flex;
+}
+
+.sap-embed-player {
+    height: 100px;
+    width: 100px;
+}
+
+/* ========== members page ========== */
+
+.members1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    flex-wrap: wrap;
+    row-gap: 50px;
+    padding: 50px;
+    margin: 100px;
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+
+.members1 div {
+    height: 400px;
+    width: 400px;
+    background-color: #203149;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 20px;
+    margin: 20px;
+    box-shadow: 10px 10px 20px rgb(111, 111, 111);
+}
+
+.members1 button {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    border: white solid 2px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    background-color: #203149;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.members1 button:hover {
+    transition: 1s;
+    background-color: #ffffff;
+    color: #122735;
+}
+
+.members1 h6 {
+    font-size: 2rem;
+    color: white;
+    padding: 0;
+    margin: 0;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+}
+
+/* ========== login page ========== */
+
+.login-page {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #d7d7d7;
+}
+  
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #203149;
+    width: 450px;
+    padding: 20px 40px;
+    border-radius: 15px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.556);
+    text-align: center;
+}
+
+.login-container h6 {
+    font-size: 2rem;
+    color: white;
+    margin: 20px 0;
+}
+
+.login-page img {
+    position: relative;
+    top: 15px;
+    height: 70px;
+    width: 70px;
+}
+  
+.login-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+  
+.login-input {
+    width: 75%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+}
+  
+.login-button {
+    width: 80%;
+    padding: 10px;
+    background-color: #3e7dc4;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    transition: .5s;
+    background-color: #8ba9cc;
+    border: none;
+}
+  
+#error-message {
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+/* ========== I'm new page ========== */
+
+.im-new-header {
+    background-image: url("https://gokcf.org/Img/kcf-im-new-header-new-color.png");
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.im-new-header h2 {
+    color: #ffffff;
+    font-size: 4.4rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.facts-and-questions {
+    background-color: #e2e2e2;
+    padding: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.facts-and-questions h3 {
+    position: relative;
+    padding: 10px;
+    margin: 0;
+    top: -30px;
+}
+
+.accordion {
+    width: 80%;
+    margin: 10px;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: "Lato", sans-serif;
+    font-size: 1.5rem;
+    padding: 20px;
+    border: 1px solid #c2c2c2;
+    background-color: #e2e2e2;
+    color: #122735;
+    text-indent: 0;
+    cursor: pointer;
+    align-items: center;
+}
+
+.active,
+.accordion:hover {
+    background-color: #d9d9d9;
+    border-color: #d9d9d9;
+    color: rgb(0, 0, 0);
+}
+
+.pannel {
+    width: 80%;
+    background-color: #e2e2e2;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 30px;
+    display: none;
+    overflow: hidden;
+    text-align: left;
+    border-radius: 4.5px;
+}
+
+.pannel p {
+    color: #122735;
+    font-weight: 500;
+    padding: 22px;
+}
+
+.faq {
+    width: 80%;
+    border-color: #000000;
+    border-width: 2px;
+    border-style: none;
+    background-color: #e2e2e2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.facts-and-questions h3 {
+    color: #122735;
+}
+
+.faq.active {
+    border: none;
+}
+
+.times1 {
+    flex-wrap: wrap;
+    row-gap: 80px;
+    padding: 50px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.TandL {
+    position: relative;
+    height: 250px;
+    width: 400px;
+    background-color: rgb(255, 255, 255);
+}
+
+.times_media {
+    background-color: #ffffff;
+    height: 100px;
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+}
+
+.times1 p {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.1rem;
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    line-height: 30px;
+}
+
+.times1 h2 {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+    color: #000000;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.times1 a {
+    color: #162c4e;
+    padding: 0;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.times2 {
+    padding: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #eaeaea;
+}
+
+.times2 h2 {
+    position: absolute;
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+    left: 0;
+    top: -30px;
+}
+
+.times2 div {
+    position: relative;
+    height: 100px;
+    width: 1100px;
+    background-color: #ffffff;
+}
+
+.times2 p {
+    line-height: 30px;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.1rem;
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+}
+
+.times2 iframe {
+    height: 300px;
+    width: 82%;
+    border-radius: 10px;
+}
+
+.times3 {
+    margin-top: 30px;
+    flex-wrap: wrap;
+    row-gap: 80px;
+    padding-top: 30px;
+    padding: 50px;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    justify-content: space-between;
+}
+
+.times3 div {
+    height: 250px;
+    width: 400px;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+}
+
+.times3 h3 {
+    top: 0;
+    padding: 0;
+    text-align: left;
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+    color: #000000;
+}
+
+.times3 p {
+    line-height: 30px;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.1rem;
+    max-width: 500px;
+}
+
+.times4 {
+    padding: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eaeaea;
+    padding-bottom: 75px;
+}
+
+.times4 img {
+    max-width: 100%;
+    width: 70%;
+    padding: 0px;
+    margin-bottom: 70px;
+}
+
+.times5 {
+    justify-content: center;
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
+}
+
+.times5 img {
+    padding: 20px;
+    height: 200px;
+    width: 200px;
+}
+
+/* ========== calendar page ========== */
+
+.kcfCalander {
+    top: -400px;
+    margin-top: 20px;
+    position: relative;
+    height: 950px;
+    width: 720px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 10px rgba(189, 189, 189, 0.317);
+}
+
+.Calander {
+    height: 950px;
+    padding: 50px;
+    background-color: #ffffff;
+}
+
+.Calander div {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+}
+
+.Calander iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.Calander button {
+    color: #162c4e;
+    position: relative;
+    top: -12px;
+    left: -5px;
+    border: none;
+    background-color: rgba(22, 44, 78, 0);
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.Calander button:hover {
+    border: none;
+    background-color: rgba(22, 44, 78, 0);
+    color: #162c4e;
+    font-size: 1.3rem;
+}
+
+/* ========== event page ========== */
+
+.event1 {
+    background-image: url("https://gokcf.org/Img/UpcomingEvents.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.event1 h1 {
+    color: #000000;
+    font-family: "Oxygen", sans-serif;
+    font-style: normal;
+    font-size: 4rem;
+    font-weight: 500; 
+}
+
+.event2 {
+    padding: 20px;
+}
+
+/* ========== other ========== */
+
+.line {
+    margin: 0px 50px 0px 50px;
+    padding: 0.5px;
+    background-color: #8d8d8d;
+}
+
+.Line_div {
+    height: 300px;
+    width: 1.5px;
+    background-color: #bfbfbf;
+}
+
+/* ========== home page ========== */
+
+.sec1 {
+    background-image: url("https://gokcf.org/Img/Web-Welcome.png");
+    background-position: center;
+    background-size: cover;
+    height: 570px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 0.5s;
+}
+
+.sec1 div {
+    height: 50%; 
+    width: 70%; 
+    background-color: rgba(237, 110, 110, 0); 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+}
+
+.sec1 div h6 {
+    color: white;
+}
+
+.sec1 div p {
+    font-size: 2rem;
+    padding: 0px;
+    margin: 0px;
+}
+
+.sec1 button svg {
+    display: none;
+}
+
+.times {
+    color: rgb(255, 255, 255); 
+    text-align: center; 
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 2.5rem;
+}
+
+.sec1 button {
+    transition: .5s;
+    font-family: "Lato", sans-serif;
+    font-style: normal; 
+    font-weight: 400;
+    font-size: 1.5rem;
+    width: 200px;
+    background-color: rgba(255, 255, 255, 0);
+    border: #ffffff solid 2px;
+    color: #ffffff;
+    cursor: pointer; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
+
+.sec1 button:hover {
+    background-color: #ffffff;
+    color: #162c4e;
+    border: #ffffff solid 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec2, .sec3, .sec4 {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #ffffff;
+    flex-wrap: wrap;
+    row-gap: 40px;
+}
+
+.sec3 {
+    flex-wrap: wrap-reverse;
+}
+
+.sec3 div iframe {
+    border-radius: 0px;
+}
+
+.sec2 > div, .sec3 > div, .sec4 > div {
+    margin: 20px;
+    height: 100%;
+    width: 590px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.sec2 img, .sec3 img, .sec4 img {
+    border-radius: 0px;
+    height: 100%;
+    max-width: 100%;
+    width: 600px;
+}
+
+.event-section {
+    height: 500px;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.City {
+    height: 700px;
+    width: 100%;
+    background-image: url("https://gokcf.org/Img/Web-Background City.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.sec5 {
+    padding: 40px;
+    background-image: url("https://gokcf.org/Img/Web-Background City.png");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    row-gap: 10px;
+}
+
+.sec5_div {
+    height: 250px;
+    width: 300px;
+    background-color: rgba(182, 38, 38, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.sec5 h6 {
+    color: #ffffff;
+    font-size: 2rem;
+    font-family: "Oxygen", sans-serif;
+    font-style: normal;
+    font-weight: 800; 
+    padding: 0px;
+    margin: 0px;
+    letter-spacing: 2px;
+}
+
+.sec5 button {
+    transition: .5s;
+    height: 40px;
+    width: 120px;
+    border: #ffffff solid 2px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    background-color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sec5 button:hover {
+    height: 40px;
+    width: 120px;
+    border: none;
+    color: rgb(255, 255, 255);
+    background-color: #2b88f2;
+}
+
+.giv4 {
+    padding: 50px; 
+    background-color: rgb(255, 255, 255); 
+    display: flex;
+    margin: 0;
+}
+
+.sec6 {
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 50px;
+}
+
+.sec6 h3 {
+    color: #000000;
+}
+
+.sec6 div {
+    border-radius: 10px;
+    height: 350px;
+    width: 600px;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+}
+
+.sec6 p {
+    color: #000000;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    text-align: center;
+    top: 100px;
+    position: absolute;
+    line-height: 30px;
+    font-size: 1.1rem;
+}
+
+.sec6 button {
+    max-width: 135px; 
+    background-color: #ffffff; 
+    border: #ffffff solid 2px; 
+    display: flex; 
+    text-align: center; 
+    position: relative; 
+    top: 100px;
+    color: #000000;
+    cursor: pointer;
+}
+
+.sec6 button:hover {
+    text-decoration: none; 
+    background-color: #000000; 
+    color: #e8e8e8;
+    border-color: #ffffff;
+    height: 43px;
+}
+
+.sec7 {
+    padding: 100px;
+    background-color: #203149;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 50px;
+}
+
+.sec7 div {
+    height: 200px;
+    width: 250px;
+    background-color: rgba(19, 214, 87, 0);
+}
+
+.sec7 ul {
+    padding: 0;
+    margin: 0;
+    background-color: rgba(151, 183, 96, 0);
+    padding-left: 70px;
+}
+
+.sec7 li {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    height: 30px;
+    width: 100%;
+    background-color: rgba(194, 52, 151, 0);
+}
+
+.sec7 a {
+    text-align: left;
+    display: block;
+    color: #ffffff;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 15px;
+}
+
+.sec7 a:hover {
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+.sec7 h6 {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    text-align: left;
+    padding-bottom: 20px;
+    font-size: 1.25rem;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.sermons {
+    max-width: 130px; 
+    background-color: #162c4e;
+}
+
+#form {
+    position: absolute;
+    display: flex; 
+    flex-direction: column; 
+    left: 65px; 
+    top: 145px; 
+    color: #000000; 
+    font-family: sans-serif;
+}
+
+input, textarea {
+    position: relative;
+    width: 320px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 0px solid #ccc;
+    background-color: #eaeaea;
+    border-radius: 5px;
+}
+    
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ffffff;
+    color: #000000;
+    border: #000000 solid 2px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #000000; 
+    border: #000000 solid 2px; 
+    color: #ffffff;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.container {
+    position: relative;
+    background-color: #6088B7;
+    padding: 30px;
+    border-radius: 10px;
+    width: 600px;
+    height: 500px;
+    display: flex; 
+    margin: auto;
+}
+
+.connect_card {
+    height: 100%;
+    width: 100%;
+}
+
+/* ========== media page ========== */
+
+.giving {
+    position: relative; 
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    margin: 30px;
+}
+
+.media-header {
+    display: flex;
+}
+
+.Media1 {
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    background-color: #203149;
+}
+
+.media-button {
+    height: 50px;
+    width: 180px;
+    color: white;
+    background-color: #3e7dc4;
+    border: none;
+    transition: .7s;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 0px;
+    font-size: .8rem;
+    margin: 30px;
+    cursor: pointer;
+}
+
+.media-button:hover {
+    background-color: #30649f;
+    border: none;
+}
+
+.Media1 div {
+    height: 200px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgba(180, 54, 54, 0);
+}
+
+.Media1 p {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.1rem;
+    row-gap: 30px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.Media1 h2 {
+    font-size: 50px;
+    font-weight: 400;
+    color: #ffffff;
+    position: relative;
+    top: 0;
+}
+
+.Media2 {
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #203149;
+    padding-bottom: 50px;
+}
+
+#messages {
+    margin: 150px;
+    transition: 2s;
+}
+
+.Media2 img {
+    border-radius: 10px;
+    height: 280px;
+    width: 490px;
+}
+
+.Media3 {
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Media3 div {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    height: 10%;
+    width: 70%;
+    background-color: #ffffff;
+    flex-wrap: wrap;
+    row-gap: 30px;
+}
+
+.Media3 img {
+    height: 100px;
+    width: 100px;
+}
+
+/* ========== giving page ========== */
+
+.giving_header {
+    background-image: url("https://gokcf.org/Img/kcf-give-header-new-color.png");
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+    background-color: #162c4e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.giving_header h2 {
+    color: #ffffff;
+    font-size: 4.4rem;
+    position: relative;
+    font-weight: 700;
+    letter-spacing: 5px;
+}
+
+.give1 {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.give1 p {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    text-align: center;
+    line-height: 30px;
+    font-size: 1.1rem;
+}
+
+.give1 div {
+    height: 100%; 
+    width: 50%; 
+    background-color: #ffffff;
+}
+
+.give2 {
+    padding: 50px; 
+    background-color: rgb(255, 255, 255); 
+    display: flex;
+}
+
+.give2 p {
+    margin: 30px;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 30px;
+    font-size: 1.1rem;
+    text-align: left;
+}
+
+.give2 h6 {
+    text-align: left;
+    padding-left: 10px;
+    margin: 20px;
+}
+
+/* ========== I'm new page (old page) ========== */
+
+.ImNewHeader {
+    background-image: url("https://gokcf.org/Img/kcf-im-new-header-seo.png");
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+    background-color: #162c4e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ImNewHeader h2 {
+    right: 20px;
+    color: #ffffff;
+    font-size: 4.4rem;
+}
+
+.new1 {
+    padding: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 50px;
+}
+
+.new1 div {
+    height: 100%;
+    width: 600px;
+    background-color: #ffffff;
+}
+
+.welcome-vid {
+    aspect-ratio: 16/9;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.new1 img {
+    max-width: 100%;
+    height: 100%;
+    width: 600px;
+    border-radius: 10px;
+}
+
+.new1 h2 {
+    padding-bottom: 30px;
+    margin: 0;
+    top: 0;
+}
+
+.new-here {
+    height: 100%;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: rgba(169, 20, 20, 0);
+    border-radius: 10px;
+}
+
+.new-here-img {
+    height: 100%;
+    width: 500px;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.new1 p {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    text-align: center;
+    line-height: 30px;
+    font-size: 1.1rem;
+    padding: 0;
+    margin: 0;
+}
+
+.new1 h4 {
+    font-size: 40px;
+}
+
+.new2 {
+    padding: 50px;
+    background-color: #e8e8e8;
+    display: flex;
+    position: relative;
+}
+
+.new2 div {
+    height: 200px;
+    width: 200px;
+    background-color: #eaeaea; 
+    align-items: center;
+}
+
+.new2 p {
+    text-align: center;
+    top: 80px;
+    position: relative;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: #000000;
+    font-size: 1.1rem;
+}
+
+.new2 h6 {
+    color: #000000;
+    position: absolute;
+    top: 60px;
+    margin: auto;
+    min-width: 200px;
+}
+
+.new3 {
+    padding: 40px;
+    margin-bottom: 0px;
+}
+
+.new3 h4 {
+    font-size: 40px;
+}
+
+.new3 div {
+    height: 100%;
+    width: 60%;
+    background-color: #ffffff;
+}
+
+.new3 p {
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 30px;
+    font-size: 1.1rem;
+}
+
+.new4 {
+    display: flex;
+    padding: 40px;
+}
+
+.new4 h3 {
+    color: #000000;
+}
+
+/* ========== mission & vision page ========== */
+
+.Mission_Header {
+    background-image: url("https://gokcf.org/Img/kcf-mission-header-new-color.png");
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Mission_Header h2 {
+    color: #ffffff;
+    font-size: 4.4rem;
+    position: relative;
+    font-weight: 700;
+    letter-spacing: 5px;
+}
+
+.mission1 {
+    padding: 40px;
+    background-color: #ffffff;
+}
+
+.mission2 {
+    padding: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 0px;
+    background-color: #ffffff;
+}
+
+.mission2 h6 {
+    font-size: 1.5rem;
+}
+
+.mission2 div {
+    height: 100%;
+    width: 400px;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+}
+
+.mission2 p {
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 30px;
+    font-size: 1.1rem;
+}
+
+/* ========== what we believe page ========== */
+
+.Believe_Header {
+    background-image: url("https://gokcf.org/Img/kcf-what-we-bel-header-new-color.png");
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.Believe_Header h2 {
+    color: #ffffff;
+    font-size: 4.4rem;
+    position: relative;
+    font-weight: 700;
+    letter-spacing: 5px;
+}
+
+.Believe1 {
+    padding: 20px;
+    background-color: #ffffff;
+    padding-bottom: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Believe1 div {
+    width: 50%;
+    height: 100%;
+    background-color: #ffffff;
+}
+
+.Believe1 p {
+    color: #000000;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-size: 1.1rem;
+    font-style: normal;
+    text-align: center;
+    line-height: 30px;
+}
+
+.Believe1 h6 {
+    font-size: 30px;
+}
+
+/* ========== our story page ========== */
+
+.Story_Header {
+    background-image: url("https://gokcf.org/Img/kcf-story-header-seo.png");
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Story_Header h2 {
+    color: #ffffff;
+    font-size: 4.4rem;
+    position: relative;
+    right: 20px;
+}
+.Story1 {
+    padding: 100px;
+    background-color: #c8c8c8;
+}
+
+.Story2 div {
+    height: 100%;
+    width: 100%;
+    max-width: 1000px;
+    background-color: rgba(198, 194, 198, 0);
+    border-radius: 10px;
+}
+
+.Story2 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 40px;
+    background-color: #e4e4e4;
+}
+
+.Story1 h6 {
+    color: #000000;
+    position: relative;
+    top: -40px;
+}
+
+.Story1 p {
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 30px;
+    font-size: 1.1rem;
+}
+
+.Story2 img {
+    padding: 100px;
+    position: relative;
+    bottom: 43px;
+}
+
+.Story2 p {
+    color: #000000;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 30px;
+    text-align: left;
+    padding: 60px;
+    position: relative;
+    bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.Story2 h6 {
+    color: #000000;
+    font-size: 2rem;
+    margin: 0;
+    padding: 60px;
+    text-align: left;
+}
+
+.Story3 div {
+    height: 100%;
+    width: 600px;
+    background-color: rgba(174, 153, 153, 0);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Story3 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 100px;
+    background-color: #ffffff;
+    flex-wrap: wrap;
+    row-gap: 0px;
+}
+
+.Story3 img {
+    max-width: 100%;
+    height: 100%;
+    width: 600px;
+    border-radius: 10px;
+}
+
+.Story3 p {
+    color: #000000;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 30px;
+    text-align: center;
+    padding: 60px;
+    font-size: 1.1rem;
+}
+
+.Story3 h6 {
+    padding: 0;
+    margin: 0;
+    font-size: 2rem;
+    padding-top: 50px;
+}
+
+.ri-movie-line {
+    height: 40px;
+    width: 40px;
+}
+
+.Volunteer1 {
+    padding: 0px;
+    height: 700px;
+    width: 100%;
+}
+
+/* ========== nursery page ========== */
+
+.Nursery1 {
+    padding: 100px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.Nursery1 div {
+    background-color: #ffffff;
+    height: 100%;
+    width: 65%;
+}
+
+.Nursery1 h3 {
+    color: #000000;
+    font-size: 25px;
+}
+
+.Nursery1 p {
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 30px;
+}
+
+.Nursery1 h6 {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    bottom: 50px;
+}
+
+.Nursery2 {
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #ffffff;
+    margin-bottom: 100px;
+    flex-wrap: wrap;
+    row-gap: 50px;
+}
+
+.Nursery2 div {
+    border-radius: 10px;
+    height: 300px;
+    width: 300px;
+    box-shadow: 10px 10px 10px rgb(185, 185, 185);
+}
+
+.Nursery2 img {
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+}
+
+.Nursery3 {
+    padding: 100px;
+    background-color: #eaeaea;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Nursery3 div {
+    height: 100%;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Nursery3 div div {
+    height: 250px;
+    width: 300px;
+    background-color: rgba(145, 39, 39, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 50px;
+}
+
+.Nursery3 p {
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 30px;
+}
+
+.Nursery3 h5 {
+    position: relative;
+    top: -30px;
+    font-size: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+.Nursery3 h6 {
+    padding: 0;
+    margin: 0;
+    min-width: 200px;
+}
+
+/* ========== Leadership page ========== */
+
+.Leadership1, .Leadership2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 30px;
+    background-color: rgba(0, 255, 255, 0);
+}
+
+.Leadership1 button, .Leadership2 button {
+    height: 40px;
+    width: 100px;
+    padding: 0px;
+    margin: 0px;
+    background-color: #3e7dc4;
+    border: none;
+    color: white;
+}
+
+.Nicky {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+}
+
+.Leadership_Header {
+    background-image: url("https://gokcf.org/Img/Leadership-Header-New-Color.png");
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.Leadership_Header h2 {
+    color: #ffffff;
+    font-size: 4.4rem;
+    position: relative;
+    font-weight: 700;
+    letter-spacing: 5px;
+}
+
+.Leadership1 div, .Leadership2 div {
+    height: 400px;
+    width: 400px;
+    background-color: rgba(151, 150, 151, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.Leadership1 p, .Leadership2 p {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.Leadership1 h3, .Leadership2 h3 {
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+    color: #000000;
+    top: 13px;
+    text-align: center;
+}
+
+.Leadership3 {
+    background-color: #eaeaea;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-top: 100px;
+}
+
+.Leadership_map {
+    position: relative;
+    background-color: #eaeaea;
+    padding: 30px;
+    border-radius: 8px;
+    width: 90%;
+    height: 500px;
+    display: flex;
+}
+
+.Leadership3 h6 {
+    font-size: 30px;
+    position: relative;
+    top: 10px;
+}
+
+/* ========== contact page ========== */
+
+.Contact1 {
+    padding: 0px;
+    background-color: #ffffff;
+}
+
+.Contact1 div {
+    height: 500px;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+/* ========== children page ========== */
+
+.Children1 img {
+    height: 100%;
+    width: 100%;
+}
+
+.Children1 {
+    padding: 0;
+    display: flex;
+    background-color: #ffffff;
+    margin-bottom: 100px;
+    flex-wrap: wrap;
+    row-gap: 50px;
+}
+
+.Children1 div {
+    height: 300px;
+    width: 300px;
+    background-color: #ccc;
+    box-shadow: 10px 10px 10px rgb(185, 185, 185); 
+}
+
+/* ========== live & missions page ========== */
+
+#WatchLive {
+    padding: 10px;
+    margin-left: 250px;
+    margin-right: 250px;
+    margin-top: 50px;
+    background-color: rgba(18, 39, 53, 0);
+}
+
+.Missions {
+    background-image: url("https://gokcf.org/Img/Coming Soon.png");
+    background-position: center;
+    background-size: cover;
+    height: 900px;
+    background-color: rgb(255, 255, 255);
+}
+
+@media (max-width: 1500px) {
+     #x {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .menu {
+        display: flex;
+    }
+
+    .HideOnMoble {
+        display: none;
+    }
+
+    .giving {
+        width: 100%;
+    }
+
+    #WatchLive {
+        margin: 0;
+        padding: 30px;
+    }
+}
+
+@media (max-width: 1062px) {
+    .Line_div {
+        display: none;
+    }
+}
+
+@media (max-width: 1020px) {
+    .sec1 h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 950px) {
+    .pannel {
+        width: 100%;
+    }
+
+    .accordion {
+        width: 100%;
+        font-size: 1rem;
+        text-align: left;
+    }
+
+    .faq {
+        width: 100%;
+    }
+    
+    .Nursery3 div {
+        background-color: rgba(165, 42, 42, 0);
+        flex-direction: column;
+        padding-top: 80px;
+        padding-bottom: 60px;
+    }
+
+    .Nursery3 div div {
+        height: auto;
+        width: 100%;
+        max-width: 100%;
+        padding: 10px 0;
+    }
+
+    .Nursery3 h5 {
+        top: 20px;
+    }
+}
+
+@media (max-width: 800px) {
+    .Nursery1 div {
+        width: 100%;
+    }
+}
+
+@media (max-width: 750px) {
+    .sidebar {
+        width: 100vw;
+        padding: 40px 24px;
+        box-sizing: border-box;
+    }
+    .sidebar li {
+        margin-left: 0 !important;
+        padding: 12px 10px;
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        box-sizing: border-box;
+    }
+    .sidebar li:last-child {
+        border-bottom: none;
+    }
+    .sidebar a {
+        font-size: 1.25rem !important;
+        display: block;
+        width: 100%;
+    }
+    #x {
+        position: absolute;
+        top: 24px;
+        right: 24px;
+    }
+
+    .kcfCalander {
+        height: auto !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        top: 0 !important;
+        position: relative;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
+        margin: 20px 0 !important;
+    }
+
+    .times4 img {
+        width: 100% !important;
+        height: auto !important;
+        max-width: 100% !important;
+        border-radius: 8px;
+    }
+
+    .times4 {
+        padding: 20px !important;
+        margin: 0;
+        display: block !important;
+    }
+}
+
+@media (max-width: 700px) {
+    #messages {
+        padding: 20px !important;
+        margin: 0px;
+    }
+
+    .sec1 {
+        height: 300px;
+    }
+
+    .sec1 button {
+        border-width: 2px;
+        border-style: solid;
+        color: rgb(255, 255, 255);
+        width: 120px;
+        height: 40px;
+        font-size: .9rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sec1 button svg {
+        display: block;
+    }
+
+    .info_div ul li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info_div a { 
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    header {
+        padding: 25px 0px 25px 0px;
+    }
+
+    .spacer {
+        height: 80px;
+    }
+
+    .sec1 div p {
+        font-size: 1.5rem;
+    }
+
+    h1, h2, h3, h4 {
+        font-size: 2rem;
+    }
+
+    .sec1 h1 {
+        font-size: 2.1rem;
+    }
+
+    .sec2, .sec3, .sec4 {
+        padding: 20px 15px;
+    }
+
+    /* Home Sections Fix */
+    .sec2 > div, .sec3 > div, .sec4 > div {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 15px 0 !important;
+        padding: 10px !important;
+        height: auto !important;
+        box-sizing: border-box;
+    }
+    .sec2 img, .sec3 img, .sec4 img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    .sec4 img {
+       margin-bottom: 30px;
+    }
+
+    .sec7 li {
+        left: 0px;
+    }
+
+    .sec7 ul {
+        padding-left: 0px;
+    }
+
+    .giving {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .logo {
+        height: 40px;
+        width: 40px;
+    }
+
+    .giving_header {
+        height: 200px;
+    }
+
+    .giving_header h2 {
+        padding: 20px;
+        font-size: 3rem;
+    }
+
+    .give1 {
+        padding: 40px;
+        background-color: #ffffff;
+    }
+
+    .give1 div {
+        margin: 0;
+        margin: auto;
+        width: 100%;
+    }
+
+    .give2 {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .give2 h6, .give2 p {
+        text-align: center;
+    }
+
+    .Mission_Header {
+        height: 200px;
+    }
+
+    .Mission_Header h2 {
+        font-size: 2rem;
+    }
+
+    .mission2 {
+        padding: 30px;
+    }
+
+    /* Mission Div Fix */
+    .mission2 div {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 10px !important;
+        margin-bottom: 20px !important;
+        box-sizing: border-box;
+    }
+
+    .Believe_Header {
+        height: 200px;
+    }
+
+    .Believe_Header h2 {
+        top: -0px;
+        font-size: 2rem;
+        padding: 20px;
+    }
+
+    .Believe1 {
+        flex-direction: column !important;
+        padding: 30px 15px !important;
+        box-sizing: border-box !important;
+    }
+    .Believe1 div {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 10px 15px !important;
+        box-sizing: border-box !important;
+    }
+
+    .Story_Header {
+        height: 350px;
+    }
+
+    .Story_Header h2 {
+        top: 0px;
+        font-size: 2.5rem;
+    }
+        
+    .Story2 {
+        padding: 0;
+        flex-direction: column;
+    }
+
+    .Story2 div {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 10px 15px !important;
+        box-sizing: border-box !important;
+        height: auto !important;
+    }
+
+    .Story2 h6 {
+        text-align: center;
+        font-size: 1.5rem;
+        bottom: 10px;
+        padding: 20px;
+    }
+
+    .Story2 p {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .Story2 img {
+        max-width: 100% !important;
+        width: auto !important;
+        height: auto !important;
+        padding: 20px !important;
+        bottom: 0px !important;
+    }
+
+    .Story3 {
+        padding: 20px 10px;
+    }
+
+    /* Our Story Div & Image Fix */
+    .Story3 div {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 10px !important;
+        box-sizing: border-box;
+    }
+    .Story3 img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    .Story3 p {
+        padding: 20px;
+    }
+
+    .Story3 h6 {
+        font-size: 1.5rem;
+    }
+
+    .Story4 {
+        padding: 10px;
+    }
+
+    .Story4 p {
+        top: 0px;
+    }
+
+    .Leadership_Header {
+        height: 200px;
+    }
+
+    .Leadership_Header h2 {
+        font-size: 2.5rem;
+        padding: 20px;
+    }
+
+    .Leadership1 {
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(22, 44, 78, 0);
+    }
+
+    .Leadership1 p {
+        padding-top: 20px;
+    }
+
+    .Leadership1 div {
+        padding: 0;
+    }
+
+    .Nicky {
+        margin: auto;
+        height: 180px;
+        width: 180px;
+    }
+
+    .Leadership2 {
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Leadership2 h3, .Leadership2 p {
+        text-align: center;
+    }
+
+    .Leadership2 p {
+        padding-top: 10px;
+    }
+
+    .Leadership2 div {
+        padding: 0;
+        margin-bottom: 40px;
+    }
+
+    /* Leadership Profile Div Resizing Fix */
+    .Leadership1 div, .Leadership2 div {
+        width: 100% !important;
+        max-width: 300px !important;
+        height: auto !important;
+        margin: 15px auto !important;
+        box-sizing: border-box;
+    }
+
+    /* Enable interactive map inside Leadership3 on mobile */
+    .Leadership3 {
+        display: flex !important;
+        flex-direction: column;
+        width: 100% !important;
+        margin-top: 40px;
+        padding: 20px 10px;
+        box-sizing: border-box;
+    }
+    .Leadership_map {
+        width: 100% !important;
+        height: 350px !important;
+        padding: 5px !important;
+        box-sizing: border-box;
+    }
+
+    .Nursery1 {
+        flex-direction: column !important;
+        padding: 30px 15px !important;
+        box-sizing: border-box !important;
+    }
+
+    .Nursery1 div {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 10px 15px !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Nursery Image Elements Grid Resizing */
+    .Nursery2 {
+        padding: 20px 10px;
+        margin-bottom: 40px;
+    }
+    .Nursery2 div {
+        width: 100% !important;
+        max-width: 280px !important;
+        height: auto !important;
+        aspect-ratio: 1/1 !important;
+        margin: 10px auto !important;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
+    }
+    .Nursery2 img {
+        width: 100% !important;
+        height: 100% !important;
+        border-radius: 10px;
+    }
+
+    .Nursery3 {
+        padding: 0px;
+        margin: 0;
+    }
+
+    .Media1 div {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 10px !important;
+        box-sizing: border-box;
+    }
+
+    .im-new-header {
+        height: 200px;
+    }
+
+    .im-new-header h2 {
+        font-size: 2rem;
+        padding: 20px;
+    }
+
+    .new1 {
+        padding: 30px 15px;
+        row-gap: 30px;
+    }
+
+    .new1 h4 {
+        font-size: 2rem;
+    }
+
+    /* ImNew Div, Images, Videos Fix */
+    .new1 div {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box;
+        padding: 10px !important;
+    }
+    .new1 img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+    }
+    .welcome-vid {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 16/9;
+    }
+
+    .new2 {
+        padding: 30px 15px;
+    }
+
+    .new2 h6 {
+        font-size: 1.5rem;
+        font-weight: 400;
+        position: static;
+        margin-bottom: 15px;
+    }
+    
+    .new2 div {
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(89, 106, 131, 0);
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .new2 p {
+        position: static;
+        top: 0px;
+    }
+
+    .new3 {
+        padding: 30px 15px;
+    }
+
+    .new3 h4 {
+        font-size: 2rem;
+    }
+
+    .new3 div {
+        width: 100%;
+        padding-bottom: 20px;
+    }
+
+    .Contact1 {
+        padding: 10px;
+    }
+
+    .Volunteer1 {
+        padding: 0px;
+        height: 550px;
+        width: 100%;
+    }
+
+    .WatchLive {
+        padding: 20px 10px;
+    }
+
+    .HideNav {
+        display: none;
+    }
+
+    /* Members Section Resizing Fix */
+    .members1 {
+        height: auto !important;
+        min-height: unset !important;
+        padding: 30px 15px;
+        margin: 20px 10px;
+    }
+
+    .members1 div {
+        width: 100% !important;
+        max-width: 320px !important;
+        height: auto !important;
+        aspect-ratio: 1/1;
+        margin: 15px auto !important;
+        padding: 20px !important;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 600px) {
+    .sec1 div {
+        width: 100%;
+    }
+}
+
+@media (max-width: 579px) {
+    .times5 img {
+        padding: 5px;
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 550px) {
+    .times2 iframe {
+        height: 200px;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .times2 {
+        padding: 20px;
+    }
+
+    .Media1 h2 {
+        font-size: 2.2rem;
+    }
+
+    .Media2 {
+        padding: 20px 10px;
+    }
+
+    .Media2 img {
+        max-width: 100% !important;
+        height: auto !important;
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 500px) {
+    /* Keep map block visible and scale nicely */
+    .times4 {
+        display: block !important;
+        padding: 15px !important;
+    }
+
+    .event2 {
+        padding: 0;
+        margin: 10px;
+    }
+
+    .times1 {
+        padding: 0px;
+        margin: 0;
+        padding-bottom: 50px;
+    }
+
+    .times1 h1 {
+        top: 20px;
+    }
+
+    .times1 p {
+        top: 100px;
+    }
+
+    .TandL {
+        background-color: rgb(255, 255, 255);
+        height: auto;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .times3 div {
+        height: auto;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .times3 {
+        padding: 15px;
+        margin: 0;
+        padding-bottom: 30px;
+    }
+
+    .Media3 {
+        padding-top: 0px;
+        background-color: #ffffff;
+    }
+
+    .Media3 div {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+}
+
+@media (max-width: 450px) {
+    .times4 {
+        padding: 15px;
+        padding-bottom: 0;
+    }
+}
+
+@media (max-width: 445px) {
+    .word-logo {
+        display: none;
+    }
+
+    .logo {
+        height: 30px;
+        width: 30px;
+    }
+
+    .spacer {
+        height: 80px;
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
