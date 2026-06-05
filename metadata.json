@@ -1,0 +1,6 @@
+{
+  "name": "Kokomo Christian Fellowship",
+  "description": "Refactored, clean, and highly organized website for the Kokomo Christian Fellowship church located in Kokomo, IN.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

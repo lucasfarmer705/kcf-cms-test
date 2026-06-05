@@ -1,0 +1,93 @@
+{
+  "entities": {
+    "Page": {
+      "title": "Page",
+      "description": "Represents a website page with dynamic draft and published contents.",
+      "type": "object",
+      "properties": {
+        "route": {
+          "type": "string",
+          "description": "The URL route path of the page (e.g. 'home', 'mission_vision', etc)."
+        },
+        "title": {
+          "type": "string",
+          "description": "The display title of the page."
+        },
+        "isCustom": {
+          "type": "boolean",
+          "description": "True if the page is a user-added custom content page."
+        },
+        "status": {
+          "type": "string",
+          "enum": ["draft", "published"],
+          "description": "The publishing lifecycle status of this page."
+        },
+        "publishedContent": {
+          "type": "object",
+          "description": "The currently live-published content sections data structure."
+        },
+        "draftContent": {
+          "type": "object",
+          "description": "The workspace draft content sections data structure currently in editing."
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp when this page document was last modified."
+        },
+        "updatedBy": {
+          "type": "string",
+          "description": "User UID who made the last change."
+        }
+      },
+      "required": ["route", "title", "isCustom", "status", "draftContent"]
+    },
+    "Image": {
+      "title": "Image",
+      "description": "Represents an uploaded CMS media asset.",
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string",
+          "description": "Direct URL to access the uploaded image."
+        },
+        "fileName": {
+          "type": "string",
+          "description": "The original name of the uploaded image file."
+        },
+        "uploadedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp when the image was uploaded."
+        }
+      },
+      "required": ["url", "fileName", "uploadedAt"]
+    },
+    "Admin": {
+      "title": "Admin",
+      "description": "Allowlists emails for CMS administrator access control.",
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "description": "The email address of the administrator."
+        }
+      },
+      "required": ["email"]
+    }
+  },
+  "firestore": {
+    "/pages/{pageId}": {
+      "schema": "Page",
+      "description": "Stores the dynamic draft and published content layouts of website pages."
+    },
+    "/images/{imageId}": {
+      "schema": "Image",
+      "description": "Stores catalog references to uploaded media assets."
+    },
+    "/admins/{adminId}": {
+      "schema": "Admin",
+      "description": "Stores verified administrator access lists."
+    }
+  }
+}

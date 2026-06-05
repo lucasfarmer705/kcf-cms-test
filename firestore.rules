@@ -1,0 +1,52 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Default-deny catch-all safety net
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Base primitives
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isEmailVerified() {
+      return isSignedIn() && request.auth.token.email_verified == true;
+    }
+
+    // Admin access control (bootstraps lucasfarmer2008@gmail.com)
+    function isAdmin() {
+      return isEmailVerified() && (
+        request.auth.token.email == "lucasfarmer2008@gmail.com" ||
+        exists(/databases/$(database)/documents/admins/$(request.auth.uid))
+      );
+    }
+
+    function isValidId(id) {
+      return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    // 1. Pages Collection rules
+    match /pages/{pageId} {
+      // Anyone can read page settings/data lists (published pages)
+      allow read: if true;
+
+      // Only authenticated admins are allowed to make CMS updates
+      allow create, delete: if isAdmin() && isValidId(pageId);
+      allow update: if isAdmin() && isValidId(pageId);
+    }
+
+    // 2. Uploaded Images Metadata Rules
+    match /images/{imageId} {
+      allow read: if true;
+      allow write: if isAdmin() && isValidId(imageId);
+    }
+
+    // 3. Admin Access Management Collection
+    match /admins/{adminId} {
+      allow read: if isSignedIn();
+      allow write: if isAdmin() && isValidId(adminId);
+    }
+  }
+}
